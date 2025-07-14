@@ -50,6 +50,22 @@ class Animal(ABC):
         pass
 
 
+class lion(Animal):
+    def make_sound(self):
+        print('ewww')
+    def eat(self):
+        print('meet')
+    def sleep(self):
+        print('11am')
+
+l = lion('l001', 'Oscar', 12, 150)
+print (l.unique_id)
+print (l.name)
+print(l.age)
+l.age = 18
+print(l.age)
+print(l.weight)
+
 
 # test class
 class cat(Animal):
@@ -67,3 +83,4 @@ print(c.age)
 c.age = 8
 print(c.age)
 print(c.weight)
+
