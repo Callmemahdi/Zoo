@@ -86,21 +86,3 @@ l.info()
 # print(l.weight)
 
 
-
-# test class
-# class Cat(Animal):
-#     def make_sound(self):
-#         print('meowwww')
-#     def eat(self):
-#         print('3AM')
-#     def sleep(self):
-#         print('9AM')
-
-# c = Cat('c002', 'fandogh', 2, 4)
-# print (c.unique_id)
-# print (c.name)
-# print(c.age)
-# c.age = 8
-# print(c.age)
-# print(c.weight)
-
