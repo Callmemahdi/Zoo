@@ -87,6 +87,7 @@ l.info()
 
 
 
+
 # test class
 # class Cat(Animal):
 #     def make_sound(self):
@@ -103,4 +104,3 @@ l.info()
 # c.age = 8
 # print(c.age)
 # print(c.weight)
-
