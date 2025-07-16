@@ -26,5 +26,11 @@ class Snake(Animal):
         print(f"the animal skin_color is: {self.skin_color}")
         print(f"the animal average_lifespan is: {self.average_lifespan}")
 
+    def perform_daily_routine(self):
+        self.make_sound()
+        self.eat()
+        self.sleep()
+
 s = Snake('S001', 'Jack', 3, 7, 'True', 200, 'striped', 'yellow', 25)
 s.info()
+s.perform_daily_routine()
