@@ -25,5 +25,13 @@ class Elephant(Animal):
         print(f"the animal habitat is: {self.habitat}")
         print(f"the animal lifespan is: {self.lifespan}")
 
+    def perform_daily_routine(self):
+        self.make_sound()
+        self.eat()
+        self.sleep()
+            
+
+
 e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
 e.info()
+e.perform_daily_routine()
