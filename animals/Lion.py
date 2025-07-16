@@ -26,8 +26,14 @@ class Lion(Animal):
         print(f"the animal group_rank is: {self.group_rank}")
         print(f"the animal speed is: {self.speed}")
 
+    def perform_daily_routine(self):
+        self.make_sound()
+        self.eat()
+        self.sleep()
+
 l = Lion('l001', 'Oscar', 12, 150, 20, 80, 30, 'alpha', 110)
 l.info()
+l.perform_daily_routine()
 # print (l.unique_id)
 # print (l.name)
 # print(l.age)
