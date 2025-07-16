@@ -1,4 +1,4 @@
-from Zoo import Animal
+from Animal import Animal
 
 class Lion(Animal):
     def __init__(self, unique_id, name, age, weight, mane_size, tail_size, roar_volume, group_rank, speed):

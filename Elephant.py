@@ -1,4 +1,4 @@
-from Zoo import Animal
+from Animal import Animal
 class Elephant(Animal):
     def __init__(self, unique_id, name, age, weight, body_length, tusk_length, species, habitat, lifespan):
         super().__init__(unique_id, name, age, weight)
