@@ -37,6 +37,22 @@ class Animal(ABC):
         else:
             raise ValueError("the weight must be positive")
 
+
+    def __str__(self):
+        return (
+            f"{self.__class__.__name__}:\n"
+            f"  ID: {self.unique_id}\n"
+            f"  Name: {self.name}\n"
+            f"  Age: {self.age}\n"
+            f"  Weight: {self.weight}"
+        )   
+
+    def __repr__(self):
+        return (
+            f"{self.__class__.__name__}(unique_id='{self.unique_id}', "
+            f"name='{self.name}', age={self.age}, weight={self.weight})"
+        )
+    
     @abstractmethod
     def eat(sleep):
         pass
