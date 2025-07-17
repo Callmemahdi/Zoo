@@ -31,6 +31,28 @@ class Snake(Animal):
         self.eat()
         self.sleep()
 
+    def __str__(self):
+        return (
+            f"{self.__class__.__name__}:\n"
+            f"ID: {self.unique_id}\n"
+            f"Name: {self.name}\n"
+            f"Age: {self.age}\n"
+            f"Weight: {self.weight}\n"
+            f"Is Venomous: {self.is_venomous}\n"
+            f"Body Length: {self.body_length}\n"
+            f"Skin Pattern: {self.skin_pattern}\n"
+            f"Skin Color: {self.skin_color}\n"
+            f"Average Lifespan: {self.average_lifespan}"
+        )
+
+    def __repr__(self):
+        return (
+            f"{self.__class__.__name__}(unique_id='{self.unique_id}', name='{self.name}', "
+            f"age={self.age}, weight={self.weight}, is_venomous={self.is_venomous}, "
+            f"body_length={self.body_length}, skin_pattern={self.skin_pattern}, "
+            f"skin_color='{self.skin_color}', average_lifespan={self.average_lifespan})"
+        )
+
 s = Snake('S001', 'Jack', 3, 7, 'True', 200, 'striped', 'yellow', 25)
 s.info()
 s.perform_daily_routine()
