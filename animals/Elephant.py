@@ -29,8 +29,28 @@ class Elephant(Animal):
         self.make_sound()
         self.eat()
         self.sleep()
-            
+    
+    def __str__(self):
+        return (
+            f"{self.__class__.__name__}:\n"
+            f"ID: {self.unique_id}\n"
+            f"Name: {self.name}\n"
+            f"Age: {self.age}\n"
+            f"Weight: {self.weight}\n"
+            f"Body Length: {self.body_length}\n"
+            f"Tusk Length: {self.tusk_length}\n"
+            f"Species: {self.species}\n"
+            f"Habitat: {self.habitat}\n"
+            f"Lifespan: {self.lifespan}"
+        )
 
+    def __repr__(self):
+        return (
+            f"{self.__class__.__name__}(unique_id='{self.unique_id}', name='{self.name}', "
+            f"age={self.age}, weight={self.weight},body_length={self.body_length},"
+            f"tusk_length={self.tusk_length}, species={self.species}, "
+            f"habitat='{self.habitat}', lifespan={self.lifespan}"
+            )
 
 e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
 e.info()
