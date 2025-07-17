@@ -31,6 +31,29 @@ class Lion(Animal):
         self.eat()
         self.sleep()
 
+    def __str__(self):
+        return (
+            f"{self.__class__.__name__}:\n"
+            f"ID: {self.unique_id}\n"
+            f"Name: {self.name}\n"
+            f"Age: {self.age}\n"
+            f"Weight: {self.weight}\n"
+            f"Mane Size: {self.mane_size}\n"
+            f"Tail Size: {self.tail_size}\n"
+            f"Roar Volume: {self.roar_volume}\n"
+            f"Group Rank: {self.group_rank}\n"
+            f"Speed: {self.speed}"
+        )
+
+    def __repr__(self):
+        return (
+            f"{self.__class__.__name__}(unique_id='{self.unique_id}', name='{self.name}', "
+            f"age={self.age}, weight={self.weight}, mane_size={self.mane_size}, "
+            f"tail_size={self.tail_size}, roar_volume={self.roar_volume}, "
+            f"group_rank='{self.group_rank}', speed={self.speed})"
+        )
+
+
 l = Lion('l001', 'Oscar', 12, 150, 20, 80, 30, 'alpha', 110)
 l.info()
 l.perform_daily_routine()
