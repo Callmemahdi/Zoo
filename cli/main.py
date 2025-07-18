@@ -24,3 +24,4 @@ z.search_animal_by_id('S001')
 
 z.count_by_type('Lion')
 z.count_by_type('Snake')
+z.count_all_animals()
