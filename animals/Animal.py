@@ -65,3 +65,7 @@ class Animal(ABC):
     def make_sound(self):
         pass
 
+    
+    @abstractmethod
+    def perform_daily_routine(self):
+        pass
