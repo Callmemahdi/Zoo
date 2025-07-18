@@ -12,7 +12,8 @@ z.add_animal(s)
 
 # z.remove_animal('S001')
 #print (animal_list)
-z.show_animals()
+#z.show_animals()
 
-z.serach_animal_by_name('Oscar')
+#z.serach_animal_by_name('Oscar')
+z.search_animal_by_id('S001')
 #print (animal_list[1].name)
