@@ -10,5 +10,6 @@ s = Snake('S001', 'Jack', 3, 7, 'True', 200, 'striped', 'yellow', 25)
 z.add_animal(s)
 print (animal_list)
 
-z.remove_animal('S001')
-print (animal_list)
+# z.remove_animal('S001')
+#print (animal_list)
+z.show_animals()
