@@ -1,4 +1,4 @@
-from Animal import Animal
+from .Animal import Animal
 
 class Snake(Animal):
     def __init__(self, unique_id, name, age, weight, is_venomous, body_length, skin_pattern, skin_color, average_lifespan):
