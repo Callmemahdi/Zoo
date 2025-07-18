@@ -19,6 +19,11 @@ class Zoo():
         for animal in animal_list:
             if animal.name == name:
                 print(animal)
+
+    def search_animal_by_id(self, unique_id):
+        for animal in animal_list:
+            if animal.unique_id == unique_id:
+                print(animal)
 # e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
 # print (e.unique_id)
     
