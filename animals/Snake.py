@@ -53,6 +53,6 @@ class Snake(Animal):
             f"skin_color='{self.skin_color}', average_lifespan={self.average_lifespan})"
         )
 
-s = Snake('S001', 'Jack', 3, 7, 'True', 200, 'striped', 'yellow', 25)
-s.info()
-s.perform_daily_routine()
+# s = Snake('S001', 'Jack', 3, 7, 'True', 200, 'striped', 'yellow', 25)
+# s.info()
+# s.perform_daily_routine()

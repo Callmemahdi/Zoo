@@ -52,6 +52,6 @@ class Elephant(Animal):
             f"habitat='{self.habitat}', lifespan={self.lifespan}"
             )
 
-e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
-e.info()
-e.perform_daily_routine()
+# e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
+# e.info()
+# e.perform_daily_routine()

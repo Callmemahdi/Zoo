@@ -54,9 +54,9 @@ class Lion(Animal):
         )
 
 
-l = Lion('l001', 'Oscar', 12, 150, 20, 80, 30, 'alpha', 110)
-l.info()
-l.perform_daily_routine()
+# l = Lion('l001', 'Oscar', 12, 150, 20, 80, 30, 'alpha', 110)
+# l.info()
+# l.perform_daily_routine()
 # print (l.unique_id)
 # print (l.name)
 # print(l.age)
