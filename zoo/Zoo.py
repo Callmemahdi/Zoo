@@ -11,5 +11,9 @@ class Zoo():
             if animal.unique_id == unique_id:
                 animal_list.remove(animal)
 
+    def show_animals(self):
+        for animal in animal_list:
+            print(animal)
+
 # e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
 # print (e.unique_id)
