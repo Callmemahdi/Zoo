@@ -13,3 +13,6 @@ z.add_animal(s)
 # z.remove_animal('S001')
 #print (animal_list)
 z.show_animals()
+
+z.serach_animal_by_name('Oscar')
+#print (animal_list[1].name)

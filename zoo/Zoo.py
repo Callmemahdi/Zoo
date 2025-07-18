@@ -17,7 +17,7 @@ class Zoo():
     
     def serach_animal_by_name(self, name):
         for animal in animal_list:
-            if animal.name == animal:
+            if animal.name == name:
                 print(animal)
 # e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
 # print (e.unique_id)
