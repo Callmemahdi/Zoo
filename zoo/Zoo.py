@@ -24,6 +24,13 @@ class Zoo():
         for animal in animal_list:
             if animal.unique_id == unique_id:
                 print(animal)
+
+    def count_by_type(self, type):
+        counter = 0
+        for animal in animal_list:
+            if animal.__class__.__name__ == type:
+                counter += 1
+        print(f"The count of {type} is: {counter}")
 # e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
 # print (e.unique_id)
     
