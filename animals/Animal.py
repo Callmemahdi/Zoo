@@ -54,11 +54,11 @@ class Animal(ABC):
         )
     
     @abstractmethod
-    def eat(sleep):
+    def eat(self):
         pass
     
     @abstractmethod
-    def sleep(sleep):
+    def sleep(self):
         pass
 
     @abstractmethod
