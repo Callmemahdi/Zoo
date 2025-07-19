@@ -53,6 +53,19 @@ class Lion(Animal):
             f"group_rank='{self.group_rank}', speed={self.speed})"
         )
 
+    def make_dict(self):
+        return {
+        "type": self.__class__.__name__,
+        "unique_id": self.unique_id,
+        "name": self.name,
+        "age": self.age,
+        "weight": self.weight,
+        "mane_size": self.mane_size,
+        "tail_size": self.tail_size,
+        "roar_volume": self.roar_volume,
+        "group_rank": self.group_rank,
+        "speed": self.speed,         
+        }
 
 # l = Lion('l001', 'Oscar', 12, 150, 20, 80, 30, 'alpha', 110)
 # l.info()
