@@ -17,6 +17,9 @@ class Zoo():
     def show_animals(self):
         for animal in animal_list:
             print(animal)
+
+    def show_animals_json(self, my_json):
+        my_json.load()
     
     def serach_animal_by_name(self, name):
         for animal in animal_list:
