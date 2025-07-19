@@ -1,5 +1,7 @@
 from animals.Lion import Lion
 from animals.Snake import Snake
+from animals.Elephant import Elephant
+
 from zoo.Zoo import Zoo, animal_list
 from storage.json_storage import JsonStorage
 # z = Zoo()
@@ -66,8 +68,48 @@ def show_menu():
 
             if i == '2':
                 print('Please enter the details of the desired animal')
+                print('unique_id:')
+                unique_id = input()
+                print('name:')
+                name = input()
+                print('age:')
+                age = input()
+                print('weight:')
+                weight = input()
+                print('is_venomous:')
+                is_venomous = input()
+                print('body_length:')
+                body_length = input()
+                print('skin_pattern:')
+                skin_pattern = input()
+                print('skin_color:')
+                skin_color = input()
+                print('average_lifespan:')
+                average_lifespan = input()
+                l = Snake(unique_id, name, age, weight, is_venomous, body_length, skin_pattern, skin_color, average_lifespan)
+                my_zoo.add_animal_json(l, my_json)
             if i == '3':
                 print('Please enter the details of the desired animal')
+                print('unique_id:')
+                unique_id = input()
+                print('name:')
+                name = input()
+                print('age:')
+                age = input()
+                print('weight:')
+                weight = input()
+                print('body_length:')
+                body_length = input()
+                print('tusk_length:')
+                tusk_length = input()
+                print('species:')
+                species = input()
+                print('habitat:')
+                habitat = input()
+                print('lifespan:')
+                lifespan = input()
+                l = Elephant(unique_id, name, age, weight, body_length, tusk_length, species, habitat, lifespan)
+                my_zoo.add_animal_json(l, my_json)
         if i == '2':
             pass
         if i == '3':
