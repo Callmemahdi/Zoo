@@ -67,6 +67,19 @@ class Lion(Animal):
         "speed": self.speed,         
         }
 
+    @classmethod
+    def make_obj(cls, data: dict):
+        l = Lion(data["unique_id"],
+                      data["name"],
+                        data["age"],
+                          data["weight"],
+                            data["mane_size"],
+                              data["tail_size"],
+                                data["roar_volume"],
+                                  data["group_rank"],
+                                    data["speed"])
+        return l
+
 # l = Lion('l001', 'Oscar', 12, 150, 20, 80, 30, 'alpha', 110)
 # l.info()
 # l.perform_daily_routine()
