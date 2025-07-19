@@ -67,6 +67,18 @@ class Snake(Animal):
         "average_lifespan": self.average_lifespan,         
         }
 
+    @classmethod
+    def make_obj(cls, data: dict):
+        s = Snake(data["unique_id"],
+                      data["name"],
+                        data["age"],
+                          data["weight"],
+                            data["is_venomous"],
+                              data["body_length"],
+                                data["skin_pattern"],
+                                  data["skin_color"],
+                                    data["average_lifespan"])
+        return s
 
 # s = Snake('S001', 'Jack', 3, 7, 'True', 200, 'striped', 'yellow', 25)
 # s.info()
