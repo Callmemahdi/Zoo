@@ -6,6 +6,9 @@ class Zoo():
     def add_animal(self, animal):
         animal_list.append(animal)
 
+
+    def add_animal_json(self, l, my_json):
+        my_json.save(l)
     def remove_animal(self, unique_id):
         for animal in animal_list:
             if animal.unique_id == unique_id:

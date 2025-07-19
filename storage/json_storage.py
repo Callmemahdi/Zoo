@@ -6,17 +6,17 @@ from animals.Snake import Snake
 
 
 class JsonStorage(AbstractStorage):
-    def save(self):
-        if self.__class__.__name__ == "Lion":
-            j = Lion.make_dict()
+    def save(self, l):
+        if l.__class__.__name__ == "Lion":
+            j = Lion.make_dict(l)
             with open("animals.json", "a") as f:
                 json.dump(j, f)
-        elif self.__class__.__name__ == "Snake" :
-            j = Snake.make_dict()
+        elif l.__class__.__name__ == "Snake" :
+            j = Snake.make_dict(l)
             with open("animals.json", "a") as f:
                 json.dump(j, f)
-        elif self.__class__.__name__ == "Elephant" :
-            j = Elephant.make_dict()
+        elif l.__class__.__name__ == "Elephant" :
+            j = Elephant.make_dict(l)
             with open("animals.json", "a") as f:
                 json.dump(j, f) 
     def load(self):
