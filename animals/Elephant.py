@@ -52,6 +52,20 @@ class Elephant(Animal):
             f"habitat='{self.habitat}', lifespan={self.lifespan}"
             )
 
+    def make_dict(self):
+        return {
+        "type": self.__class__.__name__,
+        "unique_id": self.unique_id,
+        "name": self.name,
+        "age": self.age,
+        "weight": self.weight,
+        "body_length": self.body_length,
+        "tusk_length": self.tusk_length,
+        "species": self.species,
+        "habitat": self.habitat,
+        "lifespan": self.lifespan,         
+        }
+    
 # e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
 # e.info()
 # e.perform_daily_routine()
