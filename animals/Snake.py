@@ -68,7 +68,7 @@ class Snake(Animal):
         }
 
     @classmethod
-    def make_obj(cls, data: dict):
+    def from_dict(cls, data: dict):
         s = Snake(data["unique_id"],
                       data["name"],
                         data["age"],

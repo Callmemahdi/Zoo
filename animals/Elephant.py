@@ -66,7 +66,7 @@ class Elephant(Animal):
         "lifespan": self.lifespan,         
         }
     @classmethod
-    def make_obj(cls, data: dict):
+    def from_dict(cls, data: dict):
         e = Elephant(data["unique_id"],
                       data["name"],
                         data["age"],

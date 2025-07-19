@@ -68,7 +68,7 @@ class Lion(Animal):
         }
 
     @classmethod
-    def make_obj(cls, data: dict):
+    def from_dict(cls, data: dict):
         l = Lion(data["unique_id"],
                       data["name"],
                         data["age"],
