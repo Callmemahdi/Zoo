@@ -53,6 +53,21 @@ class Snake(Animal):
             f"skin_color='{self.skin_color}', average_lifespan={self.average_lifespan})"
         )
 
+    def make_dict(self):
+        return {
+        "type": self.__class__.__name__,
+        "unique_id": self.unique_id,
+        "name": self.name,
+        "age": self.age,
+        "weight": self.weight,
+        "is_venomous": self.is_venomous,
+        "body_length": self.body_length,
+        "skin_pattern": self.skin_pattern,
+        "skin_color": self.skin_color,
+        "average_lifespan": self.average_lifespan,         
+        }
+
+
 # s = Snake('S001', 'Jack', 3, 7, 'True', 200, 'striped', 'yellow', 25)
 # s.info()
 # s.perform_daily_routine()
