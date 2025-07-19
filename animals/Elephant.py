@@ -65,7 +65,18 @@ class Elephant(Animal):
         "habitat": self.habitat,
         "lifespan": self.lifespan,         
         }
-    
+    @classmethod
+    def make_obj(cls, data: dict):
+        l = Elephant(data["unique_id"],
+                      data["name"],
+                        data["age"],
+                          data["weight"],
+                            data["body_length"],
+                              data["tusk_length"],
+                                data["species"],
+                                  data["habitat"],
+                                    data["lifespan"])
+        return l
 # e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
 # e.info()
 # e.perform_daily_routine()
