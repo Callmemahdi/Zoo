@@ -138,7 +138,9 @@ def show_menu():
         print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
         i = input()
         if i == '1':
-            pass
+            print("Enter the animal's name:")
+            i = input()
+            print(my_json.search_by_name(i))
         if i == '2':
             pass
         if i == '3':
@@ -149,7 +151,7 @@ def show_menu():
         if i == '1':
             print("Enter the animal's ID")
             i = input()
-            my_json.search_by_id(i)
+            print(my_json.search_by_id(i))
         if i == '2':
             pass
         if i == '3':
