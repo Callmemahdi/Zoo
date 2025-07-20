@@ -1,0 +1,502 @@
+[33mcommit a7a31aad505e937a758de5d594a7ce8f9782e51e[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 20:09:11 2025 +0330
+
+    refactor load and save JsonStorage claa on json_storage.py
+
+[33mcommit 7ccadc7273f823e8bea207af048e063595a08325[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 17:46:43 2025 +0330
+
+    complete handle the add an animal to json file in cli
+
+[33mcommit 3b256f8f37bf68c75533342f2ae9338ab64a68e2[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 17:27:23 2025 +0330
+
+    add animals.json to .gitignore file
+
+[33mcommit 4e1184a874eb8bfb35b3df26f14c8e9a3bef1571[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 17:25:37 2025 +0330
+
+    ♻ refactor the cli structure
+
+[33mcommit 2d90d4dfd017e6066ba36734cbcee964de986c93[m[33m ([m[1;32mZoo[m[33m)[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 14:40:50 2025 +0330
+
+    ➕ write the save method in JsonStorage class on json_storage.py
+
+[33mcommit 41df082de308f89cbdae8dda62857ea514194662[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 13:47:12 2025 +0330
+
+    make_obj method's name, changed to from_dict method
+
+[33mcommit ee918359599836712225ea13bda338d7bd44fe1d[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 12:05:43 2025 +0330
+
+    ➕ write the make_obj method in Snake class on Snake.py
+
+[33mcommit f5ed6d6010980af2d20d8a57d5f601a16f3d72f3[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 12:02:37 2025 +0330
+
+    ♻ refactor make_obj method in Lion class on Lion.py
+
+[33mcommit 1ef8e3888c3dbe358790b3da43e9b738413112d9[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 12:01:25 2025 +0330
+
+    ➕ write the make_obj method in Lion class on Lion.py
+
+[33mcommit db5b5845d09b2237937be8716618704f96ed8976[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 11:58:27 2025 +0330
+
+    ➕ write the make_obj method in Elephant class on Elephant.py
+
+[33mcommit 0b2190b21853de682c8cf1cac9b800b8ca668283[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 10:34:15 2025 +0330
+
+    ➕ write the make_dict method in Snake class on Snake.py
+
+[33mcommit 9ffff719a957de7d1812f3bf0225de03615026cc[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 10:29:30 2025 +0330
+
+    ➕ write the make_dict method in Lion class on Lion.py
+
+[33mcommit 8e586b7ff043df1969260ef6c7f2833eb79d399e[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 10:22:44 2025 +0330
+
+    ➕ write the make_dict method in Elephant class on Elephant.py
+
+[33mcommit 418fb7f94b1556d12e29909df2b1bfc53a5ee648[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 10:09:16 2025 +0330
+
+    ➕ write the base of JsonStorage class on json_storage.py
+
+[33mcommit 9cb36bb2cd021297c204fbacc2d354296828a8ac[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 09:50:52 2025 +0330
+
+    ✨ create json_storage.py file
+
+[33mcommit e771cc18debf032def7efd70b70a2df961d5d663[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 09:37:30 2025 +0330
+
+    ♻  refactor the AbstractStorage class
+
+[33mcommit 44c9780e3431252c4e26c1e880397f308427f30d[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 09:33:04 2025 +0330
+
+    ➕ write the AbstractStorage class on abstract_storage.py
+
+[33mcommit f1ba67f2b002ac5178850967e82e6eb8ad6639ef[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sat Jul 19 09:17:27 2025 +0330
+
+    ✨ create abstract_storage.py file
+
+[33mcommit f284318adbd82b055618416a1e1b768a9c413c33[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 19:03:16 2025 +0330
+
+    test count_all_animals method of Zoo class in cli.main
+
+[33mcommit d4e628493f1135df5b889112922fefa2cb0d3f32[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 18:59:19 2025 +0330
+
+    ➕ write the count_all_animals method in Zoo class on Zoo.py
+
+[33mcommit 9d9a35fc990314d99c281a5d37050416f74521a2[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 18:40:48 2025 +0330
+
+    test count_by_type method of Zoo class in cli.main
+
+[33mcommit 4ad3a4d30d1a58e309d81ee9336bc66e08464005[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 18:34:42 2025 +0330
+
+    ➕ write the count_by_type method in Zoo class on Zoo.py
+
+[33mcommit c3f072e71b93f5559483bdac5b41ad7b9e7ba250[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 17:34:55 2025 +0330
+
+    test search_animal_by_id method of Zoo class in cli.main
+
+[33mcommit 1350a8b266b8a9ef412dda873197629332bd9d35[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 17:30:53 2025 +0330
+
+    ➕ write the search_by_id method in Zoo class on Zoo.py
+
+[33mcommit f4bcae633de0f41a2d92f7f5db71af34a4ae3eac[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 17:23:35 2025 +0330
+
+    test search_by_name method of Zoo class in cli.main and refactor this method on Zoo.py
+
+[33mcommit b251791240726c1a0d7d839dde023da713e25788[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 17:14:03 2025 +0330
+
+    ➕ write the search_by_name method in Zoo class on Zoo.py
+
+[33mcommit 65c674720af01cc238ca36a813e27911ab55a805[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 17:07:44 2025 +0330
+
+    ♻  refactor the code for correct printing on console
+
+[33mcommit 7e75e1ff13406ea486aa3ce11c0e6b9df3541c53[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 16:59:16 2025 +0330
+
+    delete .vscode/ (acctually untrack it)
+
+[33mcommit ec2cb238fd30ab5eda53127b62a7c08ae98f8086[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 15:45:15 2025 +0330
+
+    add .vscode/ to .gitignore
+
+[33mcommit 5b365371e260ef454d8177612fc0a8da8ce23c64[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 15:37:49 2025 +0330
+
+    test show_animals method on cli/main.py
+
+[33mcommit c118abe54af80ef6ac4481b2d0b22da5ef1a2362[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 15:14:53 2025 +0330
+
+    ➕ add show_animal method to Zoo class in Zoo.py
+
+[33mcommit 32afbf04f2aa563968d4f854c79a3c1fc4cf1c6d[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 14:33:43 2025 +0330
+
+    test remove_animal method on cli/main.py
+
+[33mcommit a65264899db653c6fa6abde0c2f03b1ebdac098d[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 14:29:10 2025 +0330
+
+    edit imorts on subclasses
+
+[33mcommit 59fcc96682354a409779130099ebc0ab5a7f10fd[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 13:38:55 2025 +0330
+
+    remove duplicated file of Animal.py on zoo directory
+
+[33mcommit 1bbd3922f185e98f4a980712fc25b2137d8d3b83[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 13:36:52 2025 +0330
+
+    refactor Animal.py
+
+[33mcommit c60556831f68cb3b8c54d7fe5893e72a853be273[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Fri Jul 18 00:08:50 2025 +0330
+
+    ➕ write Zoo class's remove_animal method in Zoo.py and test it
+
+[33mcommit 1c32b4d8d2f5466957f051a98604f5c0fd2f8787[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Thu Jul 17 22:47:47 2025 +0330
+
+    ➕ add __str__ and __repr__ methods in Elephant.py
+
+[33mcommit e5ed2c4bdf42830a861023666ebae6d4201e0ed5[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Thu Jul 17 22:36:53 2025 +0330
+
+    ➕ add __str__ and __repr__ methods in Snake.py
+
+[33mcommit 15c42585c3a7592a1669d0c2e4977b692ac62a41[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Thu Jul 17 11:04:50 2025 +0330
+
+    ➕ add __str__ and __repr__ methods in Lion.py
+
+[33mcommit 4839687f9cd66468c47665057f14167c56f16f80[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Thu Jul 17 10:54:03 2025 +0330
+
+    ➕ add __str__ and __repr__ methods in Animals.py
+
+[33mcommit 94f1098de0ddb2eebbb16d868b32ff4fc2e3d37b[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 17:34:43 2025 +0330
+
+    ➕ write the base of main.py on cli folder and test add_animal method on it
+
+[33mcommit 1290265a082f47b2d18d3b56e13e22d69a10288b[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 17:07:49 2025 +0330
+
+    ➕ write the base of Zoo class and it's add_animal method in Zoo.py
+
+[33mcommit e4347cb912dce34d4a4d13f0b87a66f1fa69c48b[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 16:06:24 2025 +0330
+
+    ✨create Zoo.py
+
+[33mcommit 97992c5438fb8977468c44f10766c127abff8a71[m
+Merge: 32a556e b4cfba0
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 15:56:45 2025 +0330
+
+    Merge branch 'elephant' into develop
+
+[33mcommit 32a556eb9ba8de13e73a7c8a0c09b192b8cea7de[m
+Merge: c8b9d04 634df8f
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 15:55:08 2025 +0330
+
+    Merge branch 'Lion' into develop
+
+[33mcommit c8b9d040f0f1613043ab7466a6abe9fcb60a03fd[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 15:52:55 2025 +0330
+
+    ➕ write perform_daily_routine in Snake.py
+
+[33mcommit 634df8fbf1a52526229b6cd22f30679346d3dd0d[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 15:50:12 2025 +0330
+
+    ➕ write perform_daily_routine in Lion.py
+
+[33mcommit b4cfba0b54e92a4ffa57b33737cf41ca92de1287[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 15:45:39 2025 +0330
+
+    ➕ write perform_daily_routine in Elephant.py
+
+[33mcommit 21468729c35e213c1a731bc0e5b9070c3bcb4c7a[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 15:22:50 2025 +0330
+
+    ➕ write perform_daily_routine in Animals.py
+
+[33mcommit d540255b6e75e69e628494a06890e2f1f84194af[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 15:03:00 2025 +0330
+
+    ♻  Modularize project into animals, zoo, cli, storage folders
+
+[33mcommit ede2724b2fab7cd3e4aad819688f100b8d14232d[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 14:55:29 2025 +0330
+
+    ✨ Add __init__.py to make animals foldea as  a Python package
+
+[33mcommit 30a25f87d0d57bed3322331676c2ce524b21e07d[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 12:57:15 2025 +0330
+
+    🚚 Move animal.py and  animal-related classes to animals module/folder
+
+[33mcommit 12887a582c4ea8c2799dee9f3945b147817a2019[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Wed Jul 16 12:08:35 2025 +0330
+
+    rename Zoo.py to Animal.py and modified sub classes animals file
+
+[33mcommit b86c99b3181a2dbbc3fb629133268c1f8aaa19ab[m
+Merge: 7abb55d 293ae2d
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 15:56:07 2025 +0330
+
+    to modularize the project ,Merge branch 'feature/elephant' into develop
+
+[33mcommit 293ae2d67d8493e810a2cd7aa5f7b26187f7cc29[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 15:54:18 2025 +0330
+
+    edit zoo.py to solve mergr coflict3
+
+[33mcommit 7abb55d884a1bab4e056712682da3a1b0eb38439[m
+Merge: afbced1 2fb04b7
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 15:52:48 2025 +0330
+
+    to modularize the project ,Merge branch 'feature/snake_class' into develop
+
+[33mcommit 2fb04b720183d97503e9c5eded70e3766d59921c[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 15:47:41 2025 +0330
+
+    edit zoo.py to solve mergr coflict2
+
+[33mcommit afbced117137cf45a12363d792e561f52de32c9d[m
+Merge: e97f34a ce66033
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 15:44:56 2025 +0330
+
+    Merge branch 'feature/lion_class' into develop
+
+[33mcommit ce6603389eca534047da894e8c5cc00b0492fd60[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 15:44:32 2025 +0330
+
+    edit zoo.py to solve mergr coflict1
+
+[33mcommit 3f388da218a3be5ce538b0f05dbfe648d56d0d16[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 15:41:04 2025 +0330
+
+    edit zoo.py to solve mergr coflict
+
+[33mcommit e97f34ac76a91a1badd178b1db28455fe321fbd4[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 14:56:34 2025 +0330
+
+    ➖ remove Elephant class
+
+[33mcommit d948128c29254ccb7fb1ac2da694cf6b88f02a8c[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 14:54:38 2025 +0330
+
+    edit .gitignore file
+
+[33mcommit e816780f11457e11910629aac19aeb6ebbb2e117[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 14:51:45 2025 +0330
+
+    ➕ create Elephant.py module and write it's class at it
+
+[33mcommit be21bde1d6278347578f60cd223a6c2eb62ab3fd[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 14:39:53 2025 +0330
+
+    edit .gitignore file
+
+[33mcommit 852f5e8c151432bf935616164a455663d971d794[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 14:38:38 2025 +0330
+
+     ➖ remove Snake class
+
+[33mcommit b3424f142c755b760de3efc80e471986bcae96b8[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 14:34:39 2025 +0330
+
+    edit .gitignore file
+
+[33mcommit 2a247a0ccbaec4deb2d7267d73b1edbe65e91c8e[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 14:33:42 2025 +0330
+
+    ➕ write Snake class on Snake.py and edit .gitignore
+
+[33mcommit 29f1fbc1b5157695bbc12c96dad1fb57baaf7b3b[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 14:27:35 2025 +0330
+
+    ➕ create Snake.py module
+
+[33mcommit fa36c8f1586b33310fc568e4be68a07e318dc055[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 13:21:38 2025 +0330
+
+    ➖ remove lion class
+
+[33mcommit ff9ed21b1403eac158df3d9ed03f4b7a2807ebdb[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 12:32:53 2025 +0330
+
+    🐛 bux fix about import
+
+[33mcommit 1c1c4512693ce822176832d0b00436ec07c946d4[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 12:18:47 2025 +0330
+
+    ➕ create Lion.py module and write it's class at it
+
+[33mcommit caf90dc4d7b8acf69f72ad548281febbf6ee789b[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 11:58:57 2025 +0330
+
+    🔀 merge fature/elephant_class to develop
+
+[33mcommit db94bf6896c252639fc84e953c67cd4d3c65da58[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 11:56:41 2025 +0330
+
+    🔀 merge fature/snake_class to develop
+
+[33mcommit 7b495bf228e60169a2b3954167082fad36155c6c[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 11:54:26 2025 +0330
+
+    🔀 merge fature/lion_class to develop
+
+[33mcommit 1f9b8655fee50818b64d4e616dc6590009a72838[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 11:19:57 2025 +0330
+
+    edit lion class
+
+[33mcommit 8cbbdf4fda8b5e03051ccccb138efddb210b70f8[m[33m ([m[1;31morigin/feature/elephant[m[33m)[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Tue Jul 15 09:53:12 2025 +0330
+
+    🌱 create Elephant class
+
+[33mcommit 9d2e9fa4e0e748e9607d4195a2953c52f6b9837f[m[33m ([m[1;31morigin/feature/snake_class[m[33m)[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Mon Jul 14 18:46:11 2025 +0330
+
+    🌱 create Snake class
+
+[33mcommit 30a8c5f8de1b923e115f96dd260fe947d98bd19c[m[33m ([m[1;31morigin/feature/lion_class[m[33m)[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Mon Jul 14 17:36:23 2025 +0330
+
+    ➕ add properties and wanted methods like info() to Lion class
+
+[33mcommit e38eed4e0a5ec5e17fbb8447b1e68d20433dc07b[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Mon Jul 14 14:59:10 2025 +0330
+
+    create base of lion_class
+
+[33mcommit 5bca0658f9799eadff06eafe6f872a0345994939[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Mon Jul 14 13:20:27 2025 +0330
+
+    complete some property and method at Animal class
+
+[33mcommit eff74edfd92a6d26aa2d8579e07f3670308ca050[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sun Jul 13 13:36:22 2025 +0330
+
+    تغییرات ریموت
+
+[33mcommit d4582e2ae332886fb2d1034595ec1d30857f1215[m
+Author: mahdi <mmsattarzadeh1382@gmail.com>
+Date:   Sun Jul 13 11:38:47 2025 +0330
+
+    create_Zoo.py_file
+
+[33mcommit db85e9ae11c5e597e56e2ec115d91479b8dbc838[m
+Author: Callmemahdi <146475330+Callmemahdi@users.noreply.github.com>
+Date:   Sun Jul 13 12:14:03 2025 +0330
+
+    Initial commit
