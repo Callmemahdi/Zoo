@@ -174,7 +174,7 @@ def show_menu():
         print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
         i = input()
         if i == '1':
-            pass
+            print(my_json.count_all_animals())
         if i == '2':
             pass
         if i == '3':
