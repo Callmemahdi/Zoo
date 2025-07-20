@@ -18,7 +18,7 @@ class JsonStorage(AbstractStorage):
         
         file_path = "animals.json"
         animals = []
-        if os.path.exists("animals.json"):
+        if os.path.exists(file_path):
             with open(file_path, "r") as f:
                 try:
                     animals = json.load(f)
