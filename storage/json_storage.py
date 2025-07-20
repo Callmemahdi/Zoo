@@ -43,6 +43,7 @@ class JsonStorage(AbstractStorage):
                 else:
                     continue 
                 print(ins)
+
     def delete(self, unique_id):
         animals = []
 
@@ -62,3 +63,19 @@ class JsonStorage(AbstractStorage):
             json.dump(new_animals, f)
 
     
+    def search_by_id(self, unique_id):
+        animals = []
+        if not os.path.exists("animals.json"):
+            return None
+
+        with open("animals.json", "r") as f:
+            try:
+                animals = json.load(f)
+            except:
+                return None
+
+        for animal in animals:
+            if animal["unique_id"] == unique_id:
+                return animal
+
+        return None
