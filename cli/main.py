@@ -160,7 +160,12 @@ def show_menu():
         print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
         i = input()
         if i == '1':
-            pass
+            print("enter the animal type:")
+            i = input()
+            if i == "Lion" or i == "Snake" or i == "Elephant":
+                print(my_json.count_by_type(i))
+            else:
+                print("this animal type isn't exist in zoo")
         if i == '2':
             pass
         if i == '3':
