@@ -113,3 +113,14 @@ class JsonStorage(AbstractStorage):
                 count += 1
 
         return count
+
+    def count_all_animals(self):
+        if not os.path.exists("animals.json"):
+            return None
+
+        with open("animals.json", "r") as f:
+            try:
+                animals = json.load(f)
+                return len(animals)
+            except:
+                return 0
