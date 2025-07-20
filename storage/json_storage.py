@@ -44,5 +44,21 @@ class JsonStorage(AbstractStorage):
                     continue 
                 print(ins)
     def delete(self, unique_id):
-        pass
+        animals = []
+
+        if os.path.exists("animals.json"):
+            with open("animals.json", "r") as f:
+                try:
+                    animals = json.load(f)
+                except:
+                    animals = []
+
+        new_animals = []
+        for a in animals:
+            if a["unique_id"] != unique_id:
+                new_animals.append(a)
+
+        with open("animals.json", "w") as f:
+            json.dump(new_animals, f)
+
     
