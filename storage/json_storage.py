@@ -64,7 +64,7 @@ class JsonStorage(AbstractStorage):
 
     
     def search_by_id(self, unique_id):
-        animals = []
+        finded_animals = []
         if not os.path.exists("animals.json"):
             return None
 
@@ -72,16 +72,16 @@ class JsonStorage(AbstractStorage):
             try:
                 animals = json.load(f)
             except:
-                return None
+                return finded_animals
 
         for animal in animals:
             if animal["unique_id"] == unique_id:
-                return animal
-
-        return None
+                finded_animals.append(animal)
+                
+        return finded_animals
 
     def search_by_name(self, name):
-        animals = []
+        finded_animals = []
         if not os.path.exists("animals.json"):
             return  None
 
@@ -93,6 +93,6 @@ class JsonStorage(AbstractStorage):
 
         for animal in animals:
             if animal["name"] == name:
-                animals.append(animal)
+                finded_animals.append(animal)
 
-        return animals
+        return finded_animals
