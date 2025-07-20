@@ -79,3 +79,20 @@ class JsonStorage(AbstractStorage):
                 return animal
 
         return None
+
+    def search_by_name(self, name):
+        animals = []
+        if not os.path.exists("animals.json"):
+            return  None
+
+        with open("animals.json", "r") as f:
+            try:
+                animals = json.load(f)
+            except:
+                return None
+
+        for animal in animals:
+            if animal["name"] == name:
+                animals.append(animal)
+
+        return animals
