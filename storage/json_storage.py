@@ -8,11 +8,11 @@ from animals.Snake import Snake
 class JsonStorage(AbstractStorage):
     def save(self, l):
         if l.__class__.__name__ == "Lion":
-            j = Lion.make_dict(l)
+            d = Lion.make_dict(l)
         elif l.__class__.__name__ == "Snake":
-            j = Snake.make_dict(l)
+            d = Snake.make_dict(l)
         elif l.__class__.__name__ == "Elephant":
-            j = Elephant.make_dict(l)
+            d = Elephant.make_dict(l)
         else:
             raise ValueError("Invalid answer")
         
@@ -25,7 +25,7 @@ class JsonStorage(AbstractStorage):
                 except:
                     animals = []
         
-        animals.append(j)
+        animals.append(d)
 
         with open("animals.json", "w") as f:
             json.dump(animals, f)

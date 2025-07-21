@@ -18,10 +18,11 @@ class CsvStorage(AbstractStorage):
         else:
             raise ValueError("Invalid animal type")
 
-        file_exists = os.path.exists("animals.csv")
+        file_path = "animals.csv"
+        file_exists = os.path.exists(file_path)
 
-        with open("animals.csv", "a", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=row.keys())
+        with open(file_path, "a", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=list(row.keys()))
             if not file_exists:
                 writer.writeheader()
             writer.writerow(row)

@@ -187,7 +187,7 @@ def show_menu():
         if i == '1':
             my_zoo.show_animals_json(my_json)
         if i == '2':
-            pass
+            my_zoo.show_animals_csv(my_csv)
         if i == '3':
             pass
     elif n == '3':
