@@ -28,7 +28,21 @@ class CsvStorage(AbstractStorage):
 
 
     def load(self):
-        pass
+        if not os.path.exists("animals.csv"):
+            return
+
+        with open("animals.csv", "r") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row["type"] == "Lion":
+                    ins = Lion.from_dict(row)
+                elif row["type"] == "Snake":
+                    ins = Snake.from_dict(row)
+                elif row["type"] == "Elephant":
+                    ins = Elephant.from_dict(row)
+                else:
+                    continue
+                print(ins)
     
     def delete(self, unique_id):
         pass

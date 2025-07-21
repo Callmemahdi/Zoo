@@ -25,6 +25,9 @@ class Zoo():
     def show_animals_json(self, my_json):
         my_json.load()
     
+    def show_animals_csv(self, my_csv):
+        my_csv.load()
+
     def serach_animal_by_name(self, name):
         for animal in animal_list:
             if animal.name == name:
