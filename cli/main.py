@@ -222,7 +222,9 @@ def show_menu():
             i = input()
             print(my_json.search_by_id(i))
         if i == '2':
-            pass
+            print("Enter the animal's ID")
+            i = input()
+            my_csv.search_by_id(i)
         if i == '3':
             pass
     elif n == '6':

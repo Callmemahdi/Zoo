@@ -30,34 +30,60 @@ class CsvStorage(AbstractStorage):
             writer.writerow(row)
 
     def load(self):
-        if not os.path.exists("animals.csv"):
-            return
+        all_files = {
+            "Lion": "lions.csv",
+            "Snake": "snakes.csv",
+            "Elephant": "elephants.csv"
+        }
 
-        with open("animals.csv", "r") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                if row["type"] == "Lion":
-                    ins = Lion.from_dict(row)
-                elif row["type"] == "Snake":
-                    ins = Snake.from_dict(row)
-                elif row["type"] == "Elephant":
-                    ins = Elephant.from_dict(row)
-                else:
-                    continue
-                print(ins)
+        for animal_type, filename in all_files.items():
+            if os.path.exists(filename):
+                with open(filename, "r") as f:
+                    lines = f.readlines()
+                    if lines:
+                        print(animal_type.upper())
+                        for line in lines:
+                            print(line.strip())
+                        print()
+
 
     def delete(self, unique_id):
-        if not os.path.exists("animals.csv"):
-            return
+        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        for file in files:
+            if not os.path.exists(file):
+                continue
 
-        with open("animals.csv", "r") as f:
-            reader = csv.DictReader(f)
-            animals = []
-            for row in reader :
-                if row["unique_id"] != unique_id:
-                    animals.append(row)
-        
-        with open("animals.csv", "w", newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=animals[0].keys())
-            writer.writeheader()
-            writer.writerows(animals)
+            with open(file, "r") as f:
+                reader = csv.DictReader(f)
+                animals = list(reader)
+
+            new_animals = []
+            for row in animals:
+                if row["unique_id"].strip() != unique_id.strip():
+                    new_animals.append(row)
+
+            if len(new_animals) != len(animals):
+                with open(file, "w", newline='') as f:
+                    if new_animals:
+                        writer = csv.DictWriter(f, fieldnames=new_animals[0].keys())
+                        writer.writeheader()
+                        writer.writerows(new_animals)
+                print("Animal deleted")
+                return
+
+        print("Animal not found")
+
+
+
+    def search_by_id(self, unique_id):
+        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        for file in files:
+            if not os.path.exists(file):
+                continue
+            with open(file, "r") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row["unique_id"].strip() == unique_id.strip():
+                        print(row)
+                        return
+        print("Not found")
