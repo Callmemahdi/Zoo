@@ -25,3 +25,10 @@ class CsvStorage(AbstractStorage):
             if not file_exists:
                 writer.writeheader()
             writer.writerow(row)
+
+
+    def load(self):
+        pass
+    
+    def delete(self, unique_id):
+        pass
