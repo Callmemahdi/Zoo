@@ -8,25 +8,26 @@ from animals.Snake import Snake
 
 
 class CsvStorage(AbstractStorage):
-    def save(self, l):
-        if l.__class__.__name__ == "Lion":
-            row = Lion.make_dict(l)
-        elif l.__class__.__name__ == "Snake":
-            row = Snake.make_dict(l)
-        elif l.__class__.__name__ == "Elephant":
-            row = Elephant.make_dict(l)
+    def save(self, animal):
+        if animal.__class__.__name__ == "Lion":
+            row = Lion.make_dict(animal)
+            filename = "lions.csv"
+        elif animal.__class__.__name__ == "Snake":
+            row = Snake.make_dict(animal)
+            filename = "snakes.csv"
+        elif animal.__class__.__name__ == "Elephant":
+            row = Elephant.make_dict(animal)
+            filename = "elephants.csv"
         else:
             raise ValueError("Invalid animal type")
 
-        file_path = "animals.csv"
-        file_exists = os.path.exists(file_path)
+        file_exists = os.path.exists(filename)
 
-        with open(file_path, "a", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=list(row.keys()))
+        with open(filename, "a", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=row.keys())
             if not file_exists:
                 writer.writeheader()
             writer.writerow(row)
-
 
     def load(self):
         if not os.path.exists("animals.csv"):
