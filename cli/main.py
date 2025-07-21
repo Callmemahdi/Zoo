@@ -4,6 +4,7 @@ from animals.Elephant import Elephant
 
 from zoo.Zoo import Zoo, animal_list
 from storage.json_storage import JsonStorage
+from storage.csv_storage import CsvStorage
 # z = Zoo()
 # s = JsonStorage()
 
@@ -32,7 +33,7 @@ from storage.json_storage import JsonStorage
 print('Welcome to the zoo')
 my_zoo = Zoo()
 my_json = JsonStorage()
-my_csv = None
+my_csv = CsvStorage()
 my_db = None
 def show_menu():
     print('Plese select the service:\n1- Add an animal\n2- Show all animals\n3- delete an animal\n4- Search the animal by name\n5- Search the animal by id\n6- Show count of animals of a specific type\n7- Show count of all animals')
@@ -65,7 +66,6 @@ def show_menu():
                 speed = input()
                 l = Lion(unique_id, name, age, weight, mane_size, tail_size, roar_volume, group_rank, speed)
                 my_zoo.add_animal_json(l, my_json)
-
             if i == '2':
                 print('Please enter the details of the desired animal')
                 print('unique_id:')
@@ -111,7 +111,74 @@ def show_menu():
                 l = Elephant(unique_id, name, age, weight, body_length, tusk_length, species, habitat, lifespan)
                 my_zoo.add_animal_json(l, my_json)
         if i == '2':
-            pass
+            print('Please enter the animal type:\n1- Lion\n2-Snake\n3-Elephant')
+            i = input()
+            if i == '1':
+                print('Please enter the details of the desired animal')
+                print('unique_id:')
+                unique_id = input()
+                print('name:')
+                name = input()
+                print('age:')
+                age = input()
+                print('weight:')
+                weight = input()
+                print('mane_size:')
+                mane_size = input()
+                print('tail_size:')
+                tail_size = input()
+                print('roar_volume:')
+                roar_volume = input()
+                print('group_rank:')
+                group_rank = input()
+                print('speed:')
+                speed = input()
+                l = Lion(unique_id, name, age, weight, mane_size, tail_size, roar_volume, group_rank, speed)
+                my_zoo.add_animal_csv(l, my_csv)
+            if i == '2':
+                print('Please enter the details of the desired animal')
+                print('unique_id:')
+                unique_id = input()
+                print('name:')
+                name = input()
+                print('age:')
+                age = input()
+                print('weight:')
+                weight = input()
+                print('is_venomous:')
+                is_venomous = input()
+                print('body_length:')
+                body_length = input()
+                print('skin_pattern:')
+                skin_pattern = input()
+                print('skin_color:')
+                skin_color = input()
+                print('average_lifespan:')
+                average_lifespan = input()
+                l = Snake(unique_id, name, age, weight, is_venomous, body_length, skin_pattern, skin_color, average_lifespan)
+                my_zoo.add_animal_csv(l, my_csv)
+            if i == '3':
+                print('Please enter the details of the desired animal')
+                print('unique_id:')
+                unique_id = input()
+                print('name:')
+                name = input()
+                print('age:')
+                age = input()
+                print('weight:')
+                weight = input()
+                print('body_length:')
+                body_length = input()
+                print('tusk_length:')
+                tusk_length = input()
+                print('species:')
+                species = input()
+                print('habitat:')
+                habitat = input()
+                print('lifespan:')
+                lifespan = input()
+                l = Elephant(unique_id, name, age, weight, body_length, tusk_length, species, habitat, lifespan)
+                my_zoo.add_animal_csv(l, my_csv)
         if i == '3':
             pass
     elif n == '2':

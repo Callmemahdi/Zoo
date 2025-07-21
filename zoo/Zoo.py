@@ -9,6 +9,10 @@ class Zoo():
 
     def add_animal_json(self, l, my_json):
         my_json.save(l)
+
+    def add_animal_csv(self,l,my_csv):
+        my_csv.save(l)
+        
     def remove_animal(self, unique_id):
         for animal in animal_list:
             if animal.unique_id == unique_id:
