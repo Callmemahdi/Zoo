@@ -198,7 +198,9 @@ def show_menu():
             i = input()
             my_json.delete(i)
         if i == '2':
-            pass
+            print("enter the animal's ID:")
+            i = input()
+            my_csv.delete(i)
         if i == '3':
             pass
     elif n == '4':

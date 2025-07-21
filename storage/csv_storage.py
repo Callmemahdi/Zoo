@@ -44,6 +44,19 @@ class CsvStorage(AbstractStorage):
                 else:
                     continue
                 print(ins)
-    
+
     def delete(self, unique_id):
-        pass
+        if not os.path.exists("animals.csv"):
+            return
+
+        with open("animals.csv", "r") as f:
+            reader = csv.DictReader(f)
+            animals = []
+            for row in reader :
+                if row["unique_id"] != unique_id:
+                    animals.append(row)
+        
+        with open("animals.csv", "w", newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=animals[0].keys())
+            writer.writeheader()
+            writer.writerows(animals)
