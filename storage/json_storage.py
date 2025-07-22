@@ -58,10 +58,13 @@ class JsonStorage(AbstractStorage):
         for a in animals:
             if a["unique_id"] != unique_id:
                 new_animals.append(a)
-
+        if len(new_animals) == len(animals):
+            return False
+        
         with open("animals.json", "w") as f:
             json.dump(new_animals, f)
 
+        return True
     
     def search_by_id(self, unique_id):
         finded_animals = []

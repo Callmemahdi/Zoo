@@ -69,9 +69,9 @@ class CsvStorage(AbstractStorage):
                         writer.writeheader()
                         writer.writerows(new_animals)
                 print("Animal deleted")
-                return
+                return True
 
-        print("Animal not found")
+        return False
 
 
 
