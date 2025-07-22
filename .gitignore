@@ -5,4 +5,4 @@ animals.json
 animals.csv
 __pycache__/
 .vscode/
-zoo.log
+logs/

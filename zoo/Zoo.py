@@ -1,7 +1,7 @@
 #temp
 # from animals.Elephant import Elephant
 #animal_list = []
-from logger import logger
+from logs.logger import logger
 class Zoo():
     
 
