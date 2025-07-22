@@ -87,3 +87,47 @@ class CsvStorage(AbstractStorage):
                         print(row)
                         return
         print("Not found")
+
+    def search_by_name(self, name):
+        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        
+
+        for file in files:
+            if not os.path.exists(file):
+                continue
+            with open(file, "r") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row["name"] == name:
+                        print (row)
+                        return
+                        #return finded_animals
+        
+    def count_by_type(self, type):
+        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        count = 0
+
+        for file in files:
+            if os.path.exists(file):
+                with open(file, "r") as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        if row["type"] == type:
+                            count +=1
+            else:
+                continue
+        return print(count)
+
+    def count_all_animals(self):
+        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        count = 0
+
+        for file in files:
+            if os.path.exists(file):
+                with open(file, "r") as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                            count +=1
+            else:
+                continue
+        return print(count)

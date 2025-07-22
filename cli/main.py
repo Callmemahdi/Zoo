@@ -2,7 +2,7 @@ from animals.Lion import Lion
 from animals.Snake import Snake
 from animals.Elephant import Elephant
 
-from zoo.Zoo import Zoo, animal_list
+from zoo.Zoo import Zoo
 from storage.json_storage import JsonStorage
 from storage.csv_storage import CsvStorage
 # z = Zoo()
@@ -196,11 +196,11 @@ def show_menu():
         if i == '1':
             print("enter the animal's ID:")
             i = input()
-            my_json.delete(i)
+            my_zoo.remove_animal_json(i)
         if i == '2':
             print("enter the animal's ID:")
             i = input()
-            my_csv.delete(i)
+            my_zoo.remove_animal_json(i)
         if i == '3':
             pass
     elif n == '4':
@@ -209,9 +209,11 @@ def show_menu():
         if i == '1':
             print("Enter the animal's name:")
             i = input()
-            print(my_json.search_by_name(i))
+            my_zoo.serach_animal_by_name_json(i, my_json)
         if i == '2':
-            pass
+            print("Enter the animal's name:")
+            i = input()
+            print(my_zoo.serach_animal_by_name_csv(i, my_csv))
         if i == '3':
             pass
     elif n == '5':
@@ -220,11 +222,11 @@ def show_menu():
         if i == '1':
             print("Enter the animal's ID")
             i = input()
-            print(my_json.search_by_id(i))
+            my_zoo.search_animal_by_id_json(i, my_json)
         if i == '2':
             print("Enter the animal's ID")
             i = input()
-            my_csv.search_by_id(i)
+            my_zoo.search_animal_by_id_csv(i, my_csv)
         if i == '3':
             pass
     elif n == '6':
@@ -234,20 +236,25 @@ def show_menu():
             print("enter the animal type:")
             i = input()
             if i == "Lion" or i == "Snake" or i == "Elephant":
-                print(my_json.count_by_type(i))
+                my_zoo.count_by_type_json(i)
             else:
                 print("this animal type isn't exist in zoo")
         if i == '2':
-            pass
+            print("enter the animal type:")
+            i = input()
+            if i == "Lion" or i == "Snake" or i == "Elephant":
+                my_zoo.count_by_type_csv(i, my_csv)
+            else:
+                print("this animal type isn't exist in zoo")
         if i == '3':
             pass
     elif n == '7':
         print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
         i = input()
         if i == '1':
-            print(my_json.count_all_animals())
+            my_zoo.count_all_animals_json()
         if i == '2':
-            pass
+            my_zoo.count_all_animals_csv(my_csv)
         if i == '3':
             pass
 
