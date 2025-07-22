@@ -23,10 +23,10 @@ class Zoo():
     def remove_animal_csv(self, unique_id, my_csv):
         my_csv.delete(unique_id)
 
-    def serach_animal_by_name_json(self, name, my_json):
+    def search_animal_by_name_json(self, name, my_json):
         my_json.search_by_name(name)
 
-    def serach_animal_by_name_csv(self, name, my_csv):
+    def search_animal_by_name_csv(self, name, my_csv):
         return my_csv.search_by_name(name)
 
     def search_animal_by_id_json(self, unique_id, my_json):

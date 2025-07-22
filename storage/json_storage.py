@@ -78,7 +78,7 @@ class JsonStorage(AbstractStorage):
             if animal["unique_id"] == unique_id:
                 finded_animals.append(animal)
                 
-        return finded_animals
+        return print(finded_animals)
 
     def search_by_name(self, name):
         finded_animals = []
@@ -95,7 +95,7 @@ class JsonStorage(AbstractStorage):
             if animal["name"] == name:
                 finded_animals.append(animal)
 
-        return finded_animals
+        return print(finded_animals)
 
     def count_by_type(self, animal_type):
         count = 0
@@ -112,7 +112,7 @@ class JsonStorage(AbstractStorage):
             if animal["type"] == animal_type:
                 count += 1
 
-        return count
+        return print(count)
 
     def count_all_animals(self):
         if not os.path.exists("animals.json"):
