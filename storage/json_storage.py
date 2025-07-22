@@ -127,3 +127,4 @@ class JsonStorage(AbstractStorage):
                 return len(animals)
             except:
                 return 0
+

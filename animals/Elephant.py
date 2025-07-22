@@ -9,11 +9,11 @@ class Elephant(Animal):
         self.lifespan = lifespan
     
     def make_sound(self):
-        print('Pawooooo')
+        return 'Pawooooo'
     def eat(self):
-        print('12PM')
+        return 'Elephant is eating vegetables'
     def sleep(self):
-        print('9AM')
+        return 'Elephant is sleeping at 9AM'
     def info(self):
         print(f"the animal unique_id is: {self.unique_id}")
         print(f"the animal name is: {self.name}")

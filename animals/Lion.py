@@ -10,21 +10,24 @@ class Lion(Animal):
         self.speed = speed
     
     def make_sound(self):
-        print('ewww')
+        #print('roar')
+        return "roar"
     def eat(self):
-        print('2AM')
+        return "it's eating meet"
     def sleep(self):
-        print('11AM')
+        return 'it sleeps at 11AM'
     def info(self):
-        print(f"the animal unique_id is: {self.unique_id}")
-        print(f"the animal name is: {self.name}")
-        print(f"the animal age is: {self.age}")
-        print(f"the animal weight is: {self.weight}")
-        print(f"the animal mane_size is: {self.mane_size}")
-        print(f"the animal tail_size is: {self.tail_size}")
-        print(f"the animal roar_volume is: {self.roar_volume}")
-        print(f"the animal group_rank is: {self.group_rank}")
-        print(f"the animal speed is: {self.speed}")
+        return (
+            f"the animal unique_id is: {self.unique_id}\n"
+            f"the animal name is: {self.name}\n"
+            f"the animal age is: {self.age}\n"
+            f"the animal weight is: {self.weight}\n"
+            f"the animal mane_size is: {self.mane_size}\n"
+            f"the animal tail_size is: {self.tail_size}\n"
+            f"the animal roar_volume is: {self.roar_volume}\n"
+            f"the animal group_rank is: {self.group_rank}\n"
+            f"the animal speed is: {self.speed}"
+        )
 
     def perform_daily_routine(self):
         self.make_sound()
