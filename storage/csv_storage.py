@@ -9,6 +9,11 @@ from animals.Snake import Snake
 
 class CsvStorage(AbstractStorage):
     def save(self, animal):
+
+        """
+        Saves an animal to a CSV file
+        """
+
         if animal.__class__.__name__ == "Lion":
             row = Lion.make_dict(animal)
             filename = "lions.csv"
@@ -30,6 +35,9 @@ class CsvStorage(AbstractStorage):
             writer.writerow(row)
 
     def load(self):
+        """
+        Prints all animals from the CSV files to the console
+        """
         all_files = {
             "Lion": "lions.csv",
             "Snake": "snakes.csv",
@@ -48,6 +56,11 @@ class CsvStorage(AbstractStorage):
 
 
     def delete(self, unique_id):
+
+        """
+        Deletes an animal from the CSV files based on its unique ID.
+        """
+
         files = ["lions.csv", "snakes.csv", "elephants.csv"]
         for file in files:
             if not os.path.exists(file):
@@ -74,8 +87,12 @@ class CsvStorage(AbstractStorage):
         return False
 
 
-
     def search_by_id(self, unique_id):
+
+        """
+        Searches through the CSV files to find and print an animal with the specified unique ID.
+        """
+
         files = ["lions.csv", "snakes.csv", "elephants.csv"]
         for file in files:
             if not os.path.exists(file):
@@ -89,6 +106,9 @@ class CsvStorage(AbstractStorage):
         print("Not found")
 
     def search_by_name(self, name):
+        """
+        Searches through the CSV files to find and print animals with the specified name.
+        """
         files = ["lions.csv", "snakes.csv", "elephants.csv"]
         
 
@@ -104,6 +124,9 @@ class CsvStorage(AbstractStorage):
                         #return finded_animals
         
     def count_by_type(self, type):
+        """
+        Counts and prints the number of animals of the specified type in the CSV files.
+        """
         files = ["lions.csv", "snakes.csv", "elephants.csv"]
         count = 0
 
@@ -119,6 +142,9 @@ class CsvStorage(AbstractStorage):
         return print(count)
 
     def count_all_animals(self):
+        """
+        Counts and prints the total number of animals in the CSV files.
+        """
         files = ["lions.csv", "snakes.csv", "elephants.csv"]
         count = 0
 
