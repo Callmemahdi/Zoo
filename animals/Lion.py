@@ -1,22 +1,22 @@
 from .Animal import Animal
 
 class Lion(Animal):
-    def __init__(self, unique_id, name, age, weight, mane_size, tail_size, roar_volume, group_rank, speed):
+    def __init__(self, unique_id: str, name: str, age: int, weight : float, mane_size: int, tail_size: int, roar_volume: float, group_rank: str, speed: float) -> None:
         super().__init__(unique_id, name, age, weight)
-        self.mane_size = mane_size
-        self.tail_size = tail_size
-        self.roar_volume = roar_volume
-        self.group_rank = group_rank
-        self.speed = speed
+        self.mane_size: int = mane_size
+        self.tail_size: int = tail_size
+        self.roar_volume: float = roar_volume
+        self.group_rank: str = group_rank
+        self.speed: float = speed
     
-    def make_sound(self):
+    def make_sound(self) -> str:
         #print('roar')
         return "roar"
-    def eat(self):
+    def eat(self) -> str:
         return "it's eating meet"
-    def sleep(self):
+    def sleep(self) -> str:
         return 'it sleeps at 11AM'
-    def info(self):
+    def info(self) -> str:
         return (
             f"the animal unique_id is: {self.unique_id}\n"
             f"the animal name is: {self.name}\n"
@@ -29,12 +29,12 @@ class Lion(Animal):
             f"the animal speed is: {self.speed}"
         )
 
-    def perform_daily_routine(self):
+    def perform_daily_routine(self) -> None:
         self.make_sound()
         self.eat()
         self.sleep()
 
-    def __str__(self):
+    def __str__(self) -> str:
         return (
             f"{self.__class__.__name__}:\n"
             f"ID: {self.unique_id}\n"
@@ -48,7 +48,7 @@ class Lion(Animal):
             f"Speed: {self.speed}"
         )
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return (
             f"{self.__class__.__name__}(unique_id='{self.unique_id}', name='{self.name}', "
             f"age={self.age}, weight={self.weight}, mane_size={self.mane_size}, "
@@ -56,7 +56,7 @@ class Lion(Animal):
             f"group_rank='{self.group_rank}', speed={self.speed})"
         )
 
-    def make_dict(self):
+    def make_dict(self) -> dict[str, str | int | float]:
         return {
         "type": self.__class__.__name__,
         "unique_id": self.unique_id,
@@ -71,16 +71,16 @@ class Lion(Animal):
         }
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: dict) -> "Lion":
         l = Lion(data["unique_id"],
-                      data["name"],
-                        data["age"],
-                          data["weight"],
-                            data["mane_size"],
-                              data["tail_size"],
-                                data["roar_volume"],
-                                  data["group_rank"],
-                                    data["speed"])
+                data["name"],
+                data["age"],
+                data["weight"],
+                data["mane_size"],
+                data["tail_size"],
+                data["roar_volume"],
+                data["group_rank"],
+                data["speed"])
         return l
 
 # l = Lion('l001', 'Oscar', 12, 150, 20, 80, 30, 'alpha', 110)

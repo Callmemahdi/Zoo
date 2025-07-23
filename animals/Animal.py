@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class Animal(ABC):
-    def __init__(self, Unique_id, Name, Age, Weight):
+    def __init__(self, Unique_id, Name, Age, Weight)-> None:
         self.__unique_id = Unique_id
         self.__name = Name
         self.__age = Age
@@ -38,7 +38,7 @@ class Animal(ABC):
             raise ValueError("the weight must be positive")
 
 
-    def __str__(self):
+    def __str__(self)-> str:
         return (
             f"{self.__class__.__name__}:\n"
             f"  ID: {self.unique_id}\n"
@@ -47,25 +47,25 @@ class Animal(ABC):
             f"  Weight: {self.weight}"
         )   
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return (
             f"{self.__class__.__name__}(unique_id='{self.unique_id}', "
             f"name='{self.name}', age={self.age}, weight={self.weight})"
         )
     
     @abstractmethod
-    def eat(self):
+    def eat(self) -> str:
         pass
     
     @abstractmethod
-    def sleep(self):
+    def sleep(self) -> str:
         pass
 
     @abstractmethod
-    def make_sound(self):
+    def make_sound(self) -> str:
         pass
 
     
     @abstractmethod
-    def perform_daily_routine(self):
+    def perform_daily_routine(self)-> str:
         pass

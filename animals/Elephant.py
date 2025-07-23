@@ -1,20 +1,20 @@
 from .Animal import Animal
 class Elephant(Animal):
-    def __init__(self, unique_id, name, age, weight, body_length, tusk_length, species, habitat, lifespan):
+    def __init__(self, unique_id: str, name: str, age: int, weight: float, body_length: float, tusk_length: float, species: str, habitat: str, lifespan: int) -> None:
         super().__init__(unique_id, name, age, weight)
-        self.body_length = body_length
-        self.tusk_length = tusk_length
-        self.species = species
-        self.habitat = habitat
-        self.lifespan = lifespan
-    
-    def make_sound(self):
+        self.body_length: float  = body_length
+        self.tusk_length: float = tusk_length
+        self.species: str = species
+        self.habitat: str = habitat
+        self.lifespan: int = lifespan
+
+    def make_sound(self) -> str:
         return 'Pawooooo'
-    def eat(self):
+    def eat(self) -> str:
         return 'Elephant is eating vegetables'
-    def sleep(self):
+    def sleep(self) -> str:
         return 'Elephant is sleeping at 9AM'
-    def info(self):
+    def info(self) -> str:
         info_str = (
             f"the animal unique_id is: {self.unique_id}\n"
             f"the animal name is: {self.name}\n"
@@ -28,12 +28,12 @@ class Elephant(Animal):
         )
         return info_str  
 
-    def perform_daily_routine(self):
+    def perform_daily_routine(self) -> None:
         self.make_sound()
         self.eat()
         self.sleep()
     
-    def __str__(self):
+    def __str__(self) -> str:
         return (
             f"{self.__class__.__name__}:\n"
             f"ID: {self.unique_id}\n"
@@ -47,7 +47,7 @@ class Elephant(Animal):
             f"Lifespan: {self.lifespan}"
         )
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return (
             f"{self.__class__.__name__}(unique_id='{self.unique_id}', name='{self.name}', "
             f"age={self.age}, weight={self.weight},body_length={self.body_length},"
@@ -55,7 +55,7 @@ class Elephant(Animal):
             f"habitat='{self.habitat}', lifespan={self.lifespan}"
             )
 
-    def make_dict(self):
+    def make_dict(self) -> dict[str, str | int | float]:
         return {
         "type": self.__class__.__name__,
         "unique_id": self.unique_id,
@@ -69,16 +69,16 @@ class Elephant(Animal):
         "lifespan": self.lifespan,         
         }
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: dict[str, str | int | float]) -> "Elephant":
         e = Elephant(data["unique_id"],
-                      data["name"],
-                        data["age"],
-                          data["weight"],
-                            data["body_length"],
-                              data["tusk_length"],
-                                data["species"],
-                                  data["habitat"],
-                                    data["lifespan"])
+                    data["name"],
+                    data["age"],
+                    data["weight"],
+                    data["body_length"],
+                    data["tusk_length"],
+                    data["species"],
+                    data["habitat"],
+                    data["lifespan"])
         return e
 # e = Elephant('E001', 'Horton', 11, 3500, 450, 250, 'Asian', 'jungle', 43,)
 # e.info()
