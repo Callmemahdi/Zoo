@@ -1,0 +1,92 @@
+@startuml
+' Abstract class Animal
+abstract class Animal {
+    - unique_id: str
+    - name: str
+    - age: int
+    - weight: float
+    + make_sound(): str
+    + eat(): str
+    + sleep(): str
+    + info(): str
+    + perform_daily_routine(): None
+    + make_dict(): dict
+}
+
+class Lion {
+    - mane_size: float
+    - tail_size: float
+    - roar_volume: float
+    - group_rank: str
+    - speed: float
+    + make_sound(): str
+    + eat(): str
+    + sleep(): str
+    + info(): str
+    + __str__(): str
+    + __repr__(): str
+    + make_dict(): dict
+    + from_dict(data: dict): Lion
+}
+
+class Elephant {
+    - tusk_length: float
+    - trunk_length: float
+    + make_sound(): str
+    + eat(): str
+    + sleep(): str
+    + info(): str
+    + make_dict(): dict
+    + from_dict(data: dict): Elephant
+}
+
+class Snake {
+    - venomous: bool
+    - length: float
+    + make_sound(): str
+    + eat(): str
+    + sleep(): str
+    + info(): str
+    + make_dict(): dict
+    + from_dict(data: dict): Snake
+}
+
+class Zoo {
+    - animals: list[Animal]
+    + add_animal(animal: Animal): None
+    + remove_animal(unique_id: str): None
+    + find_animal(unique_id: str): Animal
+    + count_animals(): int
+    + show_animals(): None
+}
+
+class CsvStorage {
+    + save(zoo: Zoo): None
+    + load(): list[Animal]
+}
+
+class JsonStorage {
+    + save(zoo: Zoo): None
+    + load(): list[Animal]
+}
+
+class Role {
+    - name: str
+    + name(): str
+}
+
+class Permission {
+    + has_permission(role: Role, action: str): bool
+}
+
+' Inheritance
+Animal <|-- Lion
+Animal <|-- Elephant
+Animal <|-- Snake
+
+' Associations
+Zoo --> Animal : manages
+Zoo --> CsvStorage
+Zoo --> JsonStorage
+Permission --> Role
+@enduml

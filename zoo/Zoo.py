@@ -4,7 +4,7 @@
 from logs.logger import logger
 from auth.permissions import Role
 class Zoo():
-    def __init__(self, role = Role.USER):
+    def __init__(self, role = Role.ADMIN):
         self.role = role
 
     # def add_animal_json(self, l, my_json):
