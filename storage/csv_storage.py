@@ -50,10 +50,12 @@ class CsvStorage(AbstractStorage):
                     lines = f.readlines()
                     if lines:
                         print(animal_type.upper())
+                        show_lines = []
                         for line in lines:
+                            show_lines.append(line.strip())
                             print(line.strip())
                         print()
-
+                    return show_lines
 
     def delete(self, unique_id):
 

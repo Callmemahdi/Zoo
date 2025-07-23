@@ -10,22 +10,23 @@ class Snake(Animal):
         self.average_lifespan = average_lifespan
     
     def make_sound(self):
-        print('sssssssss')
+        return 'Hissssss'
     def eat(self):
-        print('11PM')
+        return 'Snake is seating rabbits'
     def sleep(self):
-        print('4AM')
+        return "it sleeps at 5PM"
     def info(self):
-        print(f"the animal unique_id is: {self.unique_id}")
-        print(f"the animal name is: {self.name}")
-        print(f"the animal age is: {self.age}")
-        print(f"the animal weight is: {self.weight}")
-        print(f"the animal is_venomous is: {self.is_venomous}")
-        print(f"the animal body_length is: {self.body_length}")
-        print(f"the animal skin_pattern is: {self.skin_pattern}")
-        print(f"the animal skin_color is: {self.skin_color}")
-        print(f"the animal average_lifespan is: {self.average_lifespan}")
-
+        return(
+            f"the animal unique_id is: {self.unique_id}\n"
+            f"the animal name is: {self.name}\n"
+            f"the animal age is: {self.age}\n"
+            f"the animal weight is: {self.weight}\n"
+            f"the animal is_venomous is: {self.is_venomous}\n"
+            f"the animal body_length is: {self.body_length}\n"
+            f"the animal skin_pattern is: {self.skin_pattern}\n"
+            f"the animal skin_color is: {self.skin_color}\n"
+            f"the animal average_lifespan is: {self.average_lifespan}\n"
+        )
     def perform_daily_routine(self):
         self.make_sound()
         self.eat()

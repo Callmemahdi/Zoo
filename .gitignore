@@ -6,3 +6,4 @@ animals.csv
 __pycache__/
 .vscode/
 logs/
+venv/
