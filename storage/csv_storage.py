@@ -4,7 +4,7 @@ from .abstract_storage import AbstractStorage
 from animals.Lion import Lion
 from animals.Elephant import Elephant
 from animals.Snake import Snake
-
+import json
 
 
 class CsvStorage(AbstractStorage):
@@ -40,23 +40,27 @@ class CsvStorage(AbstractStorage):
         Prints all animals from the CSV files to the console
         """
         all_files = {
-            "Lion": "lions.csv",
-            "Snake": "snakes.csv",
-            "Elephant": "elephants.csv"
+            "Lion": "Lion.csv",
+            "Snake": "Snake.csv",
+            "Elephant": "Elephant.csv"
         }
 
         for animal_type, filename in all_files.items():
             if os.path.exists(filename):
-                with open(filename, "r") as f:
-                    lines = f.readlines()
-                    if lines:
-                        print(animal_type.upper())
-                        show_lines = []
-                        for line in lines:
-                            show_lines.append(line.strip())
-                            print(line.strip())
-                        print()
-                    return show_lines
+                print(f"\n{animal_type.upper()}:")
+                with open(filename, "r", newline="") as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        print (row)
+                        # print(json.dumps(row, indent=2))
+                    # if lines:
+                    #     print(animal_type.upper())
+                    #     show_lines = []
+                    #     for line in lines:
+                    #         show_lines.append(line.strip())
+                    #         print(line.strip())
+                    #     print()
+                    # return show_lines
 
     def delete(self, unique_id):
 
@@ -88,7 +92,6 @@ class CsvStorage(AbstractStorage):
                 return True
 
         return False
-
 
     def search_by_id(self, unique_id):
 

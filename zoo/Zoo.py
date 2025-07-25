@@ -7,10 +7,7 @@ class Zoo():
     def __init__(self, Storage, role = Role.ADMIN):
         self.role = role
         self.storage = Storage
-    # def add_animal_json(self, l, my_json):
-    #     my_json.save(l)
-    #     logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
-
+   
     def add_animal(self, animal_data):
         if self.role != Role.ADMIN:
             print("Permission denied: only admin can add animals.")
@@ -18,36 +15,15 @@ class Zoo():
         self.storage.save(animal_data)
         logger.info(f"Added animal: {animal_data['unique_id']} ({animal_data['type']})")
 
-    # def add_animal_json(self, l, my_json):
-    #     if self.role != Role.ADMIN:
-    #         print("Permission denied: only admin can add animals.")
-    #         return
-    #     my_json.save(l)
-    #     logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
 
+    # def show_animals_json(self, my_json):
+    #     my_json.load()
 
-    # def add_animal_csv(self,l,my_csv):
-    #     my_csv.save(l)
-    #     logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
-    
-    # def add_animal_csv(self, l, my_csv):
-    #     if self.role != Role.ADMIN:
-    #         print("Permission denied: only admin can add animals.")
-    #         return
-    #     my_csv.save(l)
-    #     logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
-
-
-
-    def show_animals_json(self, my_json):
-        my_json.load()
-
-    def show_animals_csv(self, my_csv):
-        my_csv.load()
+    # def show_animals_csv(self, my_csv):
+    #     my_csv.load()
         
-    # def remove_animal_json(self, unique_id, my_json):
-    #     my_json.delete(unique_id)
-    #     logger.info(f"Removed animal: {unique_id}")
+    def show_animals(self):
+        self.storage.load()
 
     def remove_animal_json(self, unique_id, my_json):
         if self.role != Role.ADMIN:

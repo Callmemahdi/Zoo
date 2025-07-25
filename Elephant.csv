@@ -1,2 +1,2 @@
-type     ,unique_id ,name   ,age ,weight ,body_length ,tusk_length ,species ,habitat ,lifespan
-Elephant ,e008      ,kdlfkd ,511 ,   552 ,         45 ,         56 ,ffvr    ,vrverv  ,     555
+type,unique_id,name,age,weight,body_length,tusk_length,species,habitat,lifespan
+Elephant,e008,kdlfkd,511,552,45,56,ffvr,vrverv,555

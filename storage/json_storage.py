@@ -25,23 +25,24 @@ class JsonStorage(AbstractStorage):
             raise ValueError
     def load(self):
         with open("animals.json", "r") as f:
-            data = json.load(f)
-            show_animals = []
+            data = json.load(f)            
             for animal in data:
-                if animal["type"] == "Lion":
-                    ins = Lion.from_dict(animal)
-                    show_animals.append(ins)
-                elif animal["type"] == "Snake":
-                    ins = Snake.from_dict(animal)
-                    show_animals.append(ins)
-                elif animal["type"] == "Elephant":
-                    ins = Elephant.from_dict(animal)
-                    show_animals.append(ins)
-                else:
-                    continue 
+                print(json.dumps(animal, indent = 2))
+            return data
+                # if animal["type"] == "Lion":
+                #     ins = Lion.from_dict(animal)
+                #     show_animals.append(ins)
+                # elif animal["type"] == "Snake":
+                #     ins = Snake.from_dict(animal)
+                #     show_animals.append(ins)
+                # elif animal["type"] == "Elephant":
+                #     ins = Elephant.from_dict(animal)
+                #     show_animals.append(ins)
+                # else:
+                #     continue 
 
-                print(ins)
-            return show_animals
+            
+            
 
     def delete(self, unique_id):
         animals = []

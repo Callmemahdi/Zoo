@@ -74,14 +74,7 @@ def show_menu():
                     animal_data[field] = input(f"Enter the animal's {field}:\n")
                 my_zoo.add_animal(animal_data)
     elif n == '2':
-        print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
-        i = input()
-        if i == '1':
-            my_zoo.show_animals_json(my_json)
-        if i == '2':
-            my_zoo.show_animals_csv(my_csv)
-        if i == '3':
-            pass
+       my_zoo.show_animals()
     elif n == '3':
         print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
         i = input()
