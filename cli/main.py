@@ -31,6 +31,7 @@ from storage.csv_storage import CsvStorage
 # z.count_by_type('Snake')
 # z.count_all_animals()
 print('\nWelcome to the zoo')
+print ('Select your storage')
 my_zoo = Zoo()
 my_json = JsonStorage()
 my_csv = CsvStorage()
