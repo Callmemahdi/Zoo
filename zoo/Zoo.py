@@ -4,31 +4,38 @@
 from logs.logger import logger
 from auth.permissions import Role
 class Zoo():
-    def __init__(self, role = Role.ADMIN):
+    def __init__(self, Storage, role = Role.ADMIN):
         self.role = role
-
+        self.storage = Storage
     # def add_animal_json(self, l, my_json):
     #     my_json.save(l)
     #     logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
 
-    def add_animal_json(self, l, my_json):
+    def add_animal(self, animal_data):
         if self.role != Role.ADMIN:
             print("Permission denied: only admin can add animals.")
             return
-        my_json.save(l)
-        logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
+        self.storage.save(animal_data)
+        logger.info(f"Added animal: {animal_data['unique_id']} ({animal_data['type']})")
+
+    # def add_animal_json(self, l, my_json):
+    #     if self.role != Role.ADMIN:
+    #         print("Permission denied: only admin can add animals.")
+    #         return
+    #     my_json.save(l)
+    #     logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
 
 
     # def add_animal_csv(self,l,my_csv):
     #     my_csv.save(l)
     #     logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
     
-    def add_animal_csv(self, l, my_csv):
-        if self.role != Role.ADMIN:
-            print("Permission denied: only admin can add animals.")
-            return
-        my_csv.save(l)
-        logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
+    # def add_animal_csv(self, l, my_csv):
+    #     if self.role != Role.ADMIN:
+    #         print("Permission denied: only admin can add animals.")
+    #         return
+    #     my_csv.save(l)
+    #     logger.info(f"Added animal: {l.unique_id} ({l.__class__.__name__})")
 
 
 

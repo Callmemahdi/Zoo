@@ -4,32 +4,25 @@ from .abstract_storage import AbstractStorage
 from animals.Lion import Lion
 from animals.Elephant import Elephant
 from animals.Snake import Snake
+from animals.animal_factory import AnimalFactory
 
 class JsonStorage(AbstractStorage):
-    def save(self, l):
-        if l.__class__.__name__ == "Lion":
-            d = Lion.make_dict(l)
-        elif l.__class__.__name__ == "Snake":
-            d = Snake.make_dict(l)
-        elif l.__class__.__name__ == "Elephant":
-            d = Elephant.make_dict(l)
-        else:
-            raise ValueError("Invalid answer")
-        
-        file_path = "animals.json"
-        animals = []
-        if os.path.exists(file_path):
-            with open(file_path, "r") as f:
-                try:
-                    animals = json.load(f)
-                except:
-                    animals = []
-        
-        animals.append(d)
+    def save(self, animal_data):
+        try:
+            file_path = "animals.json"
+            animals = []
+            if os.path.exists(file_path):
+                with open(file_path, "r") as f:
+                    try:
+                        animals = json.load(f)
+                    except:
+                        animals = []            
+            animals.append(animal_data)
 
-        with open("animals.json", "w") as f:
-            json.dump(animals, f)
-
+            with open("animals.json", "w") as f:
+                json.dump(animals, f)
+        except:
+            raise ValueError
     def load(self):
         with open("animals.json", "r") as f:
             data = json.load(f)

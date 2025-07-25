@@ -9,3 +9,4 @@ class AbstractStorage(ABC):
     @abstractmethod
     def delete(self, unique_id):
         pass
+
