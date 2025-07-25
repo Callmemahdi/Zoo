@@ -67,30 +67,26 @@ class CsvStorage(AbstractStorage):
         """
         Deletes an animal from the CSV files based on its unique ID.
         """
-
-        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        files = ["Lion.csv", "Snake.csv", "Elephant.csv"]
         for file in files:
             if not os.path.exists(file):
                 continue
-
             with open(file, "r") as f:
                 reader = csv.DictReader(f)
                 animals = list(reader)
-
             new_animals = []
             for row in animals:
                 if row["unique_id"].strip() != unique_id.strip():
                     new_animals.append(row)
-
             if len(new_animals) != len(animals):
                 with open(file, "w", newline='') as f:
                     if new_animals:
                         writer = csv.DictWriter(f, fieldnames=new_animals[0].keys())
                         writer.writeheader()
                         writer.writerows(new_animals)
-                print("Animal deleted")
+                        print(writer)
+                #print("Animal deleted")
                 return True
-
         return False
 
     def search_by_id(self, unique_id):

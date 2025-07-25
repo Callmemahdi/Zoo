@@ -76,18 +76,9 @@ def show_menu():
     elif n == '2':
        my_zoo.show_animals()
     elif n == '3':
-        print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
+        print("enter the animal's ID:")
         i = input()
-        if i == '1':
-            print("enter the animal's ID:")
-            i = input()
-            my_zoo.remove_animal_json(i)
-        if i == '2':
-            print("enter the animal's ID:")
-            i = input()
-            my_zoo.remove_animal_csv(i)
-        if i == '3':
-            pass
+        my_zoo.delete_animal(i)
     elif n == '4':
         print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
         i = input()

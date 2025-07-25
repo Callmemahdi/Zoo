@@ -23,6 +23,7 @@ class JsonStorage(AbstractStorage):
                 json.dump(animals, f)
         except:
             raise ValueError
+
     def load(self):
         with open("animals.json", "r") as f:
             data = json.load(f)            
@@ -40,9 +41,6 @@ class JsonStorage(AbstractStorage):
                 #     show_animals.append(ins)
                 # else:
                 #     continue 
-
-            
-            
 
     def delete(self, unique_id):
         animals = []
