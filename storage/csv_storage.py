@@ -13,26 +13,27 @@ class CsvStorage(AbstractStorage):
         """
         Saves an animal to a CSV file
         """
+    
+        # if animal.__class__.__name__ == "Lion":
+        #     row = Lion.make_dict(animal)
+        #     filename = "lions.csv"
+        # elif animal.__class__.__name__ == "Snake":
+        #     row = Snake.make_dict(animal)
+        #     filename = "snakes.csv"
+        # elif animal.__class__.__name__ == "Elephant":
+        #     row = Elephant.make_dict(animal)
+        #     filename = "elephants.csv"
+        # else:
+        #     raise ValueError("Invalid animal type")
+        file_path = f"{animal['type']}.csv"
+        file_exists = os.path.exists(file_path)
+        # file_exists = os.path.exists(filename)
 
-        if animal.__class__.__name__ == "Lion":
-            row = Lion.make_dict(animal)
-            filename = "lions.csv"
-        elif animal.__class__.__name__ == "Snake":
-            row = Snake.make_dict(animal)
-            filename = "snakes.csv"
-        elif animal.__class__.__name__ == "Elephant":
-            row = Elephant.make_dict(animal)
-            filename = "elephants.csv"
-        else:
-            raise ValueError("Invalid animal type")
-
-        file_exists = os.path.exists(filename)
-
-        with open(filename, "a", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=row.keys())
+        with open(file_path, "a", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=animal.keys())
             if not file_exists:
                 writer.writeheader()
-            writer.writerow(row)
+            writer.writerow(animal)
 
     def load(self):
         """

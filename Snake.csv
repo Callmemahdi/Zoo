@@ -1,0 +1,2 @@
+type  ,unique_id ,name ,age ,weight ,is_venomous ,body_length ,skin_pattern ,skin_color ,average_lifespan
+Snake ,s005      ,kiu  , 53 ,    25 ,         45 ,        200 ,solid        ,red        ,              20

@@ -40,9 +40,9 @@ elif m == '2':
 elif m == '3':
     pass
 my_zoo = Zoo(Storage = storage)
-my_json = JsonStorage()
-my_csv = CsvStorage()
-my_db = None
+# my_json = JsonStorage()
+# my_csv = CsvStorage()
+# my_db = None
 def show_menu():
     print('Plese select the service:\n1- Add an animal\n2- Show all animals\n3- delete an animal\n4- Search the animal by name\n5- Search the animal by id\n6- Show count of animals of a specific type\n7- Show count of all animals')
     n =input()
