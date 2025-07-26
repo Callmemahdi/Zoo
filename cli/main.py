@@ -86,24 +86,8 @@ def show_menu():
         id = input("Enter the animal's ID:")
         my_zoo.search_by_id(id)
     elif n == '6':
-        print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
-        i = input()
-        if i == '1':
-            print("enter the animal type:")
-            i = input()
-            if i == "Lion" or i == "Snake" or i == "Elephant":
-                my_zoo.count_by_type_json(i, my_json)
-            else:
-                print("this animal type isn't exist in zoo")
-        if i == '2':
-            print("enter the animal type:")
-            i = input()
-            if i == "Lion" or i == "Snake" or i == "Elephant":
-                my_zoo.count_by_type_csv(i, my_csv)
-            else:
-                print("this animal type isn't exist in zoo")
-        if i == '3':
-            pass
+            group = input("enter the animal type:")
+            my_zoo.count_by_type(group)
     elif n == '7':
         print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
         i = input()

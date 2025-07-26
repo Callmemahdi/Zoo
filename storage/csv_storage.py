@@ -125,11 +125,11 @@ class CsvStorage(AbstractStorage):
                         return
                         #return finded_animals
         
-    def count_by_type(self, type):
+    def count_by_type(self, group):
         """
         Counts and prints the number of animals of the specified type in the CSV files.
         """
-        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        files = ["Lion.csv", "Snake.csv", "Elephant.csv"]
         count = 0
 
         for file in files:
@@ -137,11 +137,12 @@ class CsvStorage(AbstractStorage):
                 with open(file, "r") as f:
                     reader = csv.DictReader(f)
                     for row in reader:
-                        if row["type"] == type:
+                        if row["type"] == group:
                             count +=1
             else:
                 continue
-        return print(count)
+        print(count)    
+        return count
 
     def count_all_animals(self):
         """

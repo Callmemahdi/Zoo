@@ -35,12 +35,10 @@ class Zoo():
     def search_by_id(self, id):
         self.storage.search_by_id(id)
     
-    def count_by_type_json(self, type, my_json):
-        my_json.count_by_type(type)
-
-    def count_by_type_csv(self, type, my_csv):
-        my_csv.count_by_type(type)
-
+   
+    def count_by_type(self, group):
+        self.storage.count_by_type(group)
+        
     def count_all_animals_json(self, my_json):
         my_json.count_all_animals()
 

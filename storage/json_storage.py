@@ -95,7 +95,7 @@ class JsonStorage(AbstractStorage):
                 print(animal)
                 return(animal)
 
-    def count_by_type(self, animal_type):
+    def count_by_type(self, group):
         count = 0
         if not os.path.exists("animals.json"):
             return count
@@ -107,11 +107,11 @@ class JsonStorage(AbstractStorage):
                 return count
 
         for animal in animals:
-            if animal["type"] == animal_type:
+            if animal["type"] == group:
                 count += 1
-
-        return print(count)
-
+        print(count)
+        return count
+    
     def count_all_animals(self):
         if not os.path.exists("animals.json"):
             return None
