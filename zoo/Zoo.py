@@ -24,44 +24,17 @@ class Zoo():
         
     def show_animals(self):
         self.storage.load()
-
-    # def remove_animal_json(self, unique_id, my_json):
-    #     if self.role != Role.ADMIN:
-    #         print("Permission denied: only admin can remove animals.")
-    #         return
-    #     my_json.delete(unique_id)
-    #     logger.info(f"Removed animal: {unique_id}")
-
-
-    # def remove_animal_csv(self, unique_id, my_csv, user):
-    #     exist = my_csv.delete(unique_id)
-    #     if exist:
-    #         logger.info(f"Removed animal: {unique_id}")
-    #     else:
-    #         logger.warning(f"not exist this animall in the zoo with this ID: {unique_id}")
-
-    # def remove_animal_csv(self, unique_id, my_csv):
-    #     if self.role != Role.ADMIN:
-    #         print("Permission denied: only admin can remove animals.")
-    #         return
-    #     my_csv.delete(unique_id)
-    #     logger.info(f"Removed animal: {unique_id}")
-
+        
     def delete_animal(self, unique_id):
         self.storage.delete(unique_id)
         logger.info(f"Removed animal: {unique_id}")
         
-    # def search_animal_by_name_json(self, name, my_json):
-    #     my_json.search_by_name(name)
+    def search_by_name(self, name):
+        self.storage.search_by_name(name)
 
-    def search_animal_by_name_csv(self, name, my_csv):
-        return my_csv.search_by_name(name)
-
-    def search_animal_by_id_json(self, unique_id, my_json):
-        my_json.search_by_id(unique_id)
-    def search_animal_by_id_csv(self, unique_id, my_csv):
-        my_csv.search_by_id(unique_id)
-
+    def search_by_id(self, id):
+        self.storage.search_by_id(id)
+    
     def count_by_type_json(self, type, my_json):
         my_json.count_by_type(type)
 

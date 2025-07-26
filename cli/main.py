@@ -80,31 +80,11 @@ def show_menu():
         i = input()
         my_zoo.delete_animal(i)
     elif n == '4':
-        print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
-        i = input()
-        if i == '1':
-            print("Enter the animal's name:")
-            i = input()
-            my_zoo.search_animal_by_name_json(i, my_json)
-        if i == '2':
-            print("Enter the animal's name:")
-            i = input()
-            print(my_zoo.search_animal_by_name_csv(i, my_csv))
-        if i == '3':
-            pass
+        name = input("Enter the animal's name:")
+        my_zoo.search_by_name(name)
     elif n == '5':
-        print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
-        i = input()
-        if i == '1':
-            print("Enter the animal's ID")
-            i = input()
-            my_zoo.search_animal_by_id_json(i, my_json)
-        if i == '2':
-            print("Enter the animal's ID")
-            i = input()
-            my_zoo.search_animal_by_id_csv(i, my_csv)
-        if i == '3':
-            pass
+        id = input("Enter the animal's ID:")
+        my_zoo.search_by_id(id)
     elif n == '6':
         print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
         i = input()

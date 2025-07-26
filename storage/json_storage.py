@@ -64,27 +64,9 @@ class JsonStorage(AbstractStorage):
 
         return True
     
-    def search_by_id(self, unique_id):
-        finded_animals = []
+    def search_by_id(self, id):
         if not os.path.exists("animals.json"):
             return None
-
-        with open("animals.json", "r") as f:
-            try:
-                animals = json.load(f)
-            except:
-                return finded_animals
-
-        for animal in animals:
-            if animal["unique_id"] == unique_id:
-                finded_animals.append(animal)
-                
-        return print(finded_animals)
-
-    def search_by_name(self, name):
-        finded_animals = []
-        if not os.path.exists("animals.json"):
-            return  None
 
         with open("animals.json", "r") as f:
             try:
@@ -93,10 +75,25 @@ class JsonStorage(AbstractStorage):
                 return None
 
         for animal in animals:
-            if animal["name"] == name:
-                finded_animals.append(animal)
+            if animal["unique_id"] == id:
+                print(animal)
+                return animal                
+        return None
 
-        return print(finded_animals)
+    def search_by_name(self, name):
+        if not os.path.exists("animals.json"):
+            return  None
+
+        with open("animals.json", "r") as f:
+            try:
+                animals = json.load(f)
+            except:
+                return None
+            
+        for animal in animals:
+            if animal["name"] == name:
+                print(animal)
+                return(animal)
 
     def count_by_type(self, animal_type):
         count = 0

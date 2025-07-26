@@ -95,7 +95,7 @@ class CsvStorage(AbstractStorage):
         Searches through the CSV files to find and print an animal with the specified unique ID.
         """
 
-        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        files = ["Lion.csv", "Snake.csv", "Elephant.csv"]
         for file in files:
             if not os.path.exists(file):
                 continue
@@ -111,7 +111,7 @@ class CsvStorage(AbstractStorage):
         """
         Searches through the CSV files to find and print animals with the specified name.
         """
-        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        files = ["Lion.csv", "Snake.csv", "Elephant.csv"]
         
 
         for file in files:
@@ -120,7 +120,7 @@ class CsvStorage(AbstractStorage):
             with open(file, "r") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    if row["name"] == name:
+                    if row['name'] == name:
                         print (row)
                         return
                         #return finded_animals
