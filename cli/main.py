@@ -89,15 +89,7 @@ def show_menu():
             group = input("enter the animal type:")
             my_zoo.count_by_type(group)
     elif n == '7':
-        print ('Select your storage:\n1- json\n2- csv\n3- SQL db')
-        i = input()
-        if i == '1':
-            my_zoo.count_all_animals_json(my_json)
-        if i == '2':
-            my_zoo.count_all_animals_csv(my_csv)
-        if i == '3':
-            pass
-
+        my_zoo.count_all()        
     else:
         print('please just type a number from 1 to 7')
 

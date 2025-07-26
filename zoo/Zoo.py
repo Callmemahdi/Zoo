@@ -46,7 +46,8 @@ class Zoo():
         my_csv.count_all_animals()
     
 
-   
+    def count_all(self):
+        self.storage.count_all()
     
     
 

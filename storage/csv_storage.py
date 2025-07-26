@@ -144,11 +144,11 @@ class CsvStorage(AbstractStorage):
         print(count)    
         return count
 
-    def count_all_animals(self):
+    def count_all(self):
         """
         Counts and prints the total number of animals in the CSV files.
         """
-        files = ["lions.csv", "snakes.csv", "elephants.csv"]
+        files = ["Lion.csv", "Snake.csv", "Elephant.csv"]
         count = 0
 
         for file in files:
@@ -159,4 +159,5 @@ class CsvStorage(AbstractStorage):
                             count +=1
             else:
                 continue
-        return print(count)
+        print(count)    
+        return count
